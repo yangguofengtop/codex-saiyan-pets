@@ -4,7 +4,7 @@
 
 | Super Saiyan · 超级赛亚人 | Ultra Instinct · 自在极意功 |
 | :---: | :---: |
-| ![超级赛亚人动画预览](previews/super-saiyan.gif) | ![自在极意功动画预览](previews/ultra-instinct.gif) |
+| ![超级赛亚人动画预览](https://github.com/yangguofengtop/codex-saiyan-pets/releases/download/v1.0.0/super-saiyan.gif) | ![自在极意功动画预览](https://github.com/yangguofengtop/codex-saiyan-pets/releases/download/v1.0.0/ultra-instinct.gif) |
 | 金色尖发、青绿色眼睛、橙蓝训练服 | 银白尖发、银灰眼睛、裸上身与橙蓝训练装 |
 
 每张预览依次展示九组动作和十六个视线方向。
@@ -13,11 +13,19 @@
 
 [下载最新版本](https://github.com/yangguofengtop/codex-saiyan-pets/releases/latest)
 
-可在仓库的 **Releases** 下载单个宠物安装包，也可以选择 **Code → Download ZIP** 下载整个仓库并解压。
+在 **Releases → Assets** 选择需要的安装包：
+
+| 文件 | 内容 |
+| --- | --- |
+| `codex-saiyan-pets-v1.0.0.zip` | 两个宠物、安装脚本、预览和说明的完整资源包 |
+| `super-saiyan-v1.0.0.zip` | 超级赛亚人单独安装包 |
+| `ultra-instinct-v1.0.0.zip` | 自在极意功单独安装包 |
+
+需要运行安装脚本时，请下载完整资源包。GitHub 自动生成的 `Source code` 压缩包仅包含仓库中的说明文件；宠物二进制资源通过版本附件分发。
 
 ### Windows
 
-在解压后的仓库根目录打开 PowerShell：
+在解压后的完整资源包根目录打开 PowerShell：
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1
@@ -59,9 +67,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1 -Pet u
 - 九组动作：待机、向右跑、向左跑、挥手、跳跃、失落、等待回应、专注工作、思考审阅。
 - 十六个顺时针视线方向；正上、正右、正下、正左分别对应 000、090、180、270 度。
 
-两套图集均已通过格式、透明边缘、动作完整性、独立方向盲测和最终视觉检查。安装文件的 SHA-256 见 [checksums.sha256](checksums.sha256)。
+两套图集均已通过格式、透明边缘、动作完整性、独立方向盲测和最终视觉检查。下载包的 SHA-256 见版本附件 [SHA256SUMS.txt](https://github.com/yangguofengtop/codex-saiyan-pets/releases/download/v1.0.0/SHA256SUMS.txt)；完整资源包内的 `checksums.sha256` 可用于核对安装文件。
 
-## 仓库内容
+## 完整资源包内容
 
 ```text
 pets/          两个可直接安装的宠物
