@@ -2,6 +2,12 @@
 
 两个《龙珠》灵感的 Q 版 Codex 自定义动画宠物：**超级赛亚人**和**自在极意功**。
 
+## 在线试玩
+
+**[打开宠物修炼室 →](https://yangguofengtop.github.io/codex-saiyan-pets/)**
+
+无需安装即可切换两种形态、体验九组动作和十六方向视线。支持鼠标与触屏互动、背景切换、暂停、速度和大小调整。
+
 | Super Saiyan · 超级赛亚人 | Ultra Instinct · 自在极意功 |
 | :---: | :---: |
 | ![超级赛亚人动画预览](https://github.com/yangguofengtop/codex-saiyan-pets/releases/download/v1.0.0/super-saiyan.gif) | ![自在极意功动画预览](https://github.com/yangguofengtop/codex-saiyan-pets/releases/download/v1.0.0/ultra-instinct.gif) |
@@ -21,7 +27,7 @@
 | `super-saiyan-v1.0.0.zip` | 超级赛亚人单独安装包 |
 | `ultra-instinct-v1.0.0.zip` | 自在极意功单独安装包 |
 
-需要运行安装脚本时，请下载完整资源包。GitHub 自动生成的 `Source code` 压缩包仅包含仓库中的说明文件；宠物二进制资源通过版本附件分发。
+需要运行安装脚本时，请下载完整资源包。GitHub 自动生成的 `Source code` 压缩包包含试玩页面源码；桌面宠物安装包通过版本附件分发。
 
 ### Windows
 
@@ -79,6 +85,8 @@ checksums.sha256
 ```
 
 ## 项目说明
+
+试玩页面使用原生 HTML、CSS 和 JavaScript，无需构建或安装依赖。克隆仓库后，在根目录启动任意静态文件服务器即可预览，例如 `python -m http.server 8000`。图集随站点保存，不依赖外部图片服务。
 
 这是使用 AI 辅助创作的非官方同人项目，与《龙珠》的原作版权方无关联。原作角色、名称及商标等权利归各自权利人所有；本仓库不代表获得原作授权。
 

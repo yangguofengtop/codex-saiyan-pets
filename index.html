@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f2">
+  <meta name="description" content="挑一位桌面伙伴，试玩超级赛亚人与自在极意功的九种动作和十六方向视线，免费下载 Codex 宠物。">
+  <title>宠物修炼室 · Saiyan Pets</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#playground">跳到试玩区</a>
+  <div class="site-shell">
+    <header class="header">
+      <a class="brand" href="./" aria-label="宠物修炼室首页"><span class="brand-mark" aria-hidden="true">✳</span><span>宠物修炼室<small>小小伙伴，无限潜力</small></span></a>
+      <nav aria-label="主导航"><a class="nav-active" href="#playground">在线试玩</a><a href="#install">安装指南</a><a class="github-link" href="https://github.com/yangguofengtop/codex-saiyan-pets" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></nav>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div><p class="eyebrow"><span aria-hidden="true"></span> 给专注，多一点陪伴</p><h1 id="page-title">找一个伙伴，<br>一起<span class="accent">修炼日常。</span><span class="hero-spark" aria-hidden="true">✦</span></h1><p class="intro-description">忙碌的桌面，也可以有一点可爱。<br class="mobile-break">先在这里认识它，再带它回家。</p></div>
+        <div class="intro-note"><span class="note-star" aria-hidden="true">✧</span><span>不用安装，先玩一会儿<small>两种形态 · 九种动作 · 十六向视线</small></span></div>
+      </section>
+
+      <section class="lab" id="playground" aria-label="宠物互动试玩">
+        <aside class="pet-sidebar" aria-labelledby="choose-title">
+          <div class="section-heading"><h2 id="choose-title">选择你的伙伴</h2><span class="count">02</span></div>
+          <div class="pet-list" role="group" aria-label="宠物形态">
+            <button class="pet-card selected" data-pet="super-saiyan" aria-pressed="true">
+              <span class="pet-portrait portrait-gold"><canvas data-thumbnail="super-saiyan" width="192" height="208" role="img" aria-label="金发超级赛亚人"></canvas></span>
+              <span class="pet-card-copy"><span class="pet-edition">热血搭档</span><strong>超级赛亚人</strong><span>元气满格，陪你突破</span></span><span class="selection-mark" aria-hidden="true">✓</span>
+            </button>
+            <button class="pet-card" data-pet="ultra-instinct" aria-pressed="false">
+              <span class="pet-portrait portrait-silver"><canvas data-thumbnail="ultra-instinct" width="192" height="208" role="img" aria-label="银发自在极意功"></canvas></span>
+              <span class="pet-card-copy"><span class="pet-edition">专注搭档</span><strong>自在极意功</strong><span>心无杂念，自在前行</span></span><span class="selection-mark" aria-hidden="true">✓</span>
+            </button>
+          </div>
+          <div class="companion-note"><span aria-hidden="true">✦</span><p>每一种状态，<br>都有伙伴陪着你。<small>工作、思考，偶尔也发个呆。</small></p></div>
+          <a class="contribute-link" href="https://github.com/yangguofengtop/codex-saiyan-pets/issues/new" target="_blank" rel="noopener noreferrer">下一个伙伴，你来想象 <span aria-hidden="true">↗</span></a>
+        </aside>
+
+        <div class="playground-panel">
+          <div class="window-bar"><span class="window-title"><i aria-hidden="true"></i>小小的修炼场</span><label class="follow-control"><input id="follow-toggle" type="checkbox" role="switch" checked><span class="switch-track" aria-hidden="true"></span>目光跟随</label></div>
+          <div class="stage theme-cream" id="stage" aria-label="互动区域：移动鼠标或手指让宠物看向你，点击宠物挥手">
+            <div class="stage-topline"><span class="live-badge"><i aria-hidden="true"></i>正在陪伴</span><span class="stage-pet-name" id="stage-pet-name">超级赛亚人</span></div>
+            <span class="stage-doodle doodle-one" aria-hidden="true">✧</span><span class="stage-doodle doodle-two" aria-hidden="true">+</span>
+            <div class="stage-orbit" aria-hidden="true"></div><div class="floor-shadow" aria-hidden="true"></div>
+            <canvas class="pet-canvas" id="pet-canvas" width="384" height="416" role="button" tabindex="0" aria-label="超级赛亚人，点击或按回车挥手"></canvas>
+            <span class="pointer-dot" id="pointer-dot" aria-hidden="true" hidden></span>
+            <div class="loading-state" id="loading-state" role="status"><span class="loader" aria-hidden="true"></span><span id="loading-message">伙伴正在赶来…</span><button id="retry-load" type="button" hidden>再试一次</button></div>
+            <div class="stage-bottom"><span id="stage-hint">移动鼠标，看看它的目光</span><span class="action-status" id="action-status" role="status" aria-live="polite">自在待机</span></div>
+          </div>
+          <div class="playback-toolbar">
+            <div class="background-picker" role="group" aria-label="试玩背景"><span class="toolbar-label">换个背景</span><button class="background-swatch cream active" data-theme="cream" aria-label="奶油白背景" aria-pressed="true"></button><button class="background-swatch sage" data-theme="sage" aria-label="薄荷绿背景" aria-pressed="false"></button><button class="background-swatch night" data-theme="night" aria-label="深夜背景" aria-pressed="false"></button></div>
+            <div class="playback-controls"><button class="pause-button" id="pause-button" type="button" aria-pressed="false"><span id="pause-icon" aria-hidden="true">Ⅱ</span><span id="pause-label">暂停</span></button><label class="speed-label" for="speed-select">速度</label><select id="speed-select" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select><button class="reset-button" id="reset-button" type="button" aria-label="重置试玩设置" title="重置试玩设置">↺</button></div>
+          </div>
+          <div class="action-area"><div class="action-heading"><h2>今天是什么状态？</h2><span>点击切换，慢慢认识它</span></div><div class="action-buttons" id="action-buttons" role="group" aria-label="选择宠物动作"></div></div>
+          <div class="size-control"><label for="size-range">伙伴大小</label><input id="size-range" type="range" min="80" max="150" step="10" value="110"><output id="size-value" for="size-range">110%</output><span class="keyboard-hint"><kbd>空格</kbd> 暂停 / 继续</span></div>
+        </div>
+      </section>
+
+      <section class="take-home" aria-labelledby="take-home-title"><div><span class="download-symbol" aria-hidden="true">↓</span><div><h2 id="take-home-title">喜欢这个小家伙？带回桌面吧。</h2><p id="download-description">下载超级赛亚人，成为你的 Codex 桌面伙伴。</p></div></div><a class="download-button" id="download-button" href="https://github.com/yangguofengtop/codex-saiyan-pets/releases/download/v1.0.0/super-saiyan-v1.0.0.zip">下载超级赛亚人 <span aria-hidden="true">↘</span></a></section>
+
+      <section class="install-section" id="install" aria-labelledby="install-title"><div class="install-title"><p class="eyebrow">从试玩，到陪伴</p><h2 id="install-title">三步，迎接新伙伴。</h2><a href="https://github.com/yangguofengtop/codex-saiyan-pets#下载与安装" target="_blank" rel="noopener noreferrer">查看完整说明 <span aria-hidden="true">↗</span></a></div><ol class="install-steps"><li><span class="step-number">01</span><h3>下载并解压</h3><p>选择喜欢的形态，解压下载的 ZIP，保留整个宠物文件夹。</p></li><li><span class="step-number">02</span><h3>放进宠物目录</h3><p>将文件夹复制到 <code>~/.codex/pets/</code>。已配置 <code>CODEX_HOME</code> 时，使用其中的 <code>pets/</code> 目录。</p></li><li><span class="step-number">03</span><h3>唤醒你的伙伴</h3><p>打开 Codex 设置中的「Mini 与虚拟宠物」，刷新、选择，然后唤醒 Mini。</p></li></ol></section>
+    </main>
+    <footer><a class="footer-brand" href="./">✳ 宠物修炼室</a><p>认真生活，也留一点可爱。</p><a href="https://github.com/yangguofengtop/codex-saiyan-pets" target="_blank" rel="noopener noreferrer">开源项目 ↗</a><small>非官方 AI 辅助同人创作。原作角色与名称等权利归各自权利人所有。</small></footer>
+  </div>
+  <noscript><div class="noscript-message">互动试玩需要启用 JavaScript。你仍可以通过页面中的下载链接获取宠物。</div></noscript>
+</body>
+</html>
